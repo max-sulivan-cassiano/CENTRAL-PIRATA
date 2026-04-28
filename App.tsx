@@ -20,15 +20,14 @@ import {
   Hotel
 } from 'lucide-react';
 import Logistics from './logistics';
-import SalesCalculator from './SalesCalculator';
-import Investments from './Investments';
-import MotoClube from './MotoClube';
-import Musica from './Musica';
+import SalesCalculator from './salescalculator';
+import Investments from './investments';
+import MotoClube from './motoclube';
+import Musica from './musica';
 import Lazer from './lazer';
-import ComprasPessoais from './ComprasPessoais';
-import Hospedagem from './Hospedagem';
-import LoadingScreen from './loadingScreen';
-
+import ComprasPessoais from './compraspessoais';
+import Hospedagem from './hospedagem';
+import LoadingScreen from './loadingscreen';
 type Tab = 'vendas' | 'investimentos' | 'logistica' | 'mc' | 'musica' | 'lazer' | 'compras' | 'hospedagem';
 
 export default function App() {
