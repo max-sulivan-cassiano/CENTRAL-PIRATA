@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Outfit:wght@100..900&family=UnifrakturMaguntia&family=Orbitron:wght@700;900&family=Bebas+Neue&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-gothic: "UnifrakturMaguntia", cursive;
+  --font-orbitron: "Orbitron", sans-serif;
+  --font-bebas: "Bebas Neue", sans-serif;
+
+  --color-pm-orange: #FF5E00;
+  --color-pm-fire: #FFD200;
+  --color-pm-metal: #4A4A4A;
+  --color-pm-dark: #1A0F0A;
+  --color-pm-black: #000000;
+}
+
+@layer base {
+  body {
+    @apply bg-pm-black text-pm-orange font-mono selection:bg-pm-orange selection:text-black;
+  }
+
+  /* Scanline effect from design */
+  body::before {
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    z-index: 9999;
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+    opacity: 0.15;
+  }
+}
+
+.glow-orange {
+  filter: drop-shadow(0 0 8px #FF5E00);
+}
+
+.glow-fire {
+  filter: drop-shadow(0 0 15px #FFD200);
+}
+
+.glow-green {
+  filter: drop-shadow(0 0 10px rgba(0, 255, 0, 0.6));
+}
+
+.glow-red {
+  filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.6));
+}
+
+.border-terminal {
+  @apply border border-pm-metal bg-pm-dark;
+}
+
+.titulo-moderno {
+  font-family: var(--font-bebas);
+  color: #fff;
+  font-size: 3.5em;
+  margin: 0;
+  letter-spacing: 4px;
+  text-shadow: 3px 3px 0px #ff4500;
+}
+
+.pulsar-pirata {
+  font-family: var(--font-orbitron);
+  text-align: center;
+  animation: piscarVermelho 5s infinite ease-in-out;
+}
+
+@keyframes piscarVermelho {
+  0%, 100% { color: #400; text-shadow: none; }
+  50% { color: #f00; text-shadow: 0 0 10px #f00, 0 0 20px #ff0000; }
+}
+
