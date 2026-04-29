@@ -19,7 +19,7 @@ import {
   Package,
   Hotel
 } from 'lucide-react';
-import Logistics from './logistics';
+import Logistics from './Logistics';
 import SalesCalculator from './SalesCalculator';
 import Investments from './Investments';
 import MotoClube from './MotoClube';
