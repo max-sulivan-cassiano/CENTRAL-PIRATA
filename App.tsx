@@ -19,15 +19,15 @@ import {
   Package,
   Hotel
 } from 'lucide-react';
-import Logistics from './Logistics';
-import SalesCalculator from './SalesCalculator';
-import Investments from './Investments';
-import MotoClube from './MotoClube';
-import Musica from './Musica';
-import Lazer from './Lazer';
-import ComprasPessoais from './ComprasPessoais';
-import Hospedagem from './Hospedagem';
-import LoadingScreen from './LoadingScreen';
+# 1. Força o Git a reconhecer a letra maiúscula de verdade
+git mv Logistics.tsx Logistics-temp.tsx
+git mv Logistics-temp.tsx Logistics.tsx
+
+# 2. Faça o mesmo para os outros que derem erro, ou renomeie todos no código para minúsculo.
+# 3. Envie a mudança real para o GitHub
+git add .
+git commit -m "Ajuste definitivo de maiúsculas"
+git push origin main
 type Tab = 'vendas' | 'investimentos' | 'logistica' | 'mc' | 'musica' | 'lazer' | 'compras' | 'hospedagem';
 
 export default function App() {
